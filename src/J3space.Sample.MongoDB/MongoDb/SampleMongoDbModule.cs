@@ -24,10 +24,7 @@ namespace J3space.Sample.MongoDb
     {
         public override void ConfigureServices(ServiceConfigurationContext context)
         {
-            context.Services.AddMongoDbContext<SampleMongoDbContext>(options =>
-            {
-                options.AddDefaultRepositories();
-            });
+            context.Services.AddMongoDbContext<SampleMongoDbContext>(options => { options.AddDefaultRepositories(); });
         }
     }
 }

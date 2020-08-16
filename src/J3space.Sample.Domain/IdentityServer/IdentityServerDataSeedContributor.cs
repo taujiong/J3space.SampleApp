@@ -110,7 +110,7 @@ namespace J3space.Sample.IdentityServer
                 await CreateClientAsync(
                     webClientId,
                     commonScopes,
-                    new[] { "authorization_code" },
+                    new[] {"authorization_code"},
                     (configurationSection["Sample_Web:ClientSecret"] ?? "1q2w3e*").Sha256(),
                     $"{webClientRootUrl}signin-oidc",
                     $"{webClientRootUrl}signout-callback-oidc",
@@ -124,7 +124,7 @@ namespace J3space.Sample.IdentityServer
                 await CreateClientAsync(
                     consoleClientId,
                     commonScopes,
-                    new[] { "password", "client_credentials" },
+                    new[] {"password", "client_credentials"},
                     (configurationSection["Sample_App:ClientSecret"] ?? "1q2w3e*").Sha256()
                 );
         }

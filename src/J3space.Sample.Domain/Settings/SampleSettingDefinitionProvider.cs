@@ -10,19 +10,17 @@ namespace J3space.Sample.Settings
         {
             context.Add(
                 new SettingDefinition(
-                SampleSettings.App.Name,
-                "MyApplication",
-                L($"DisplayName:{SampleSettings.App.Name}"),
-                L($"Description:{SampleSettings.App.Name}"),
-                true),
-
+                    SampleSettings.App.Name,
+                    "MyApplication",
+                    L($"DisplayName:{SampleSettings.App.Name}"),
+                    L($"Description:{SampleSettings.App.Name}"),
+                    true),
                 new SettingDefinition(
                     SampleSettings.App.Url,
                     null,
                     L($"DisplayName:{SampleSettings.App.Url}"),
                     L($"Description:{SampleSettings.App.Url}"),
                     true),
-
                 new SettingDefinition(
                     SampleSettings.App.LogoUrl,
                     null,
@@ -36,6 +34,5 @@ namespace J3space.Sample.Settings
         {
             return LocalizableString.Create<SampleResource>(name);
         }
-
     }
 }

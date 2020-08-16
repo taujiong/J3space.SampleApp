@@ -124,7 +124,7 @@ namespace J3space.Sample
                 options =>
                 {
                     options.SwaggerDoc("v1",
-                        new OpenApiInfo { Title = "Sample API", Version = "v1" });
+                        new OpenApiInfo {Title = "Sample API", Version = "v1"});
                     options.DocInclusionPredicate((docName, description) => true);
                 });
         }
