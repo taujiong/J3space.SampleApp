@@ -1,18 +1,14 @@
 @page
+@model J3space.Sample.Pages.Index
 @{
   ViewData["Title"] = "Home page";
 }
 
 <div id="vue">
-  <h1>@L["LongWelcomeMessage"]</h1>
+  <h1>["LongWelcomeMessage"]</h1>
 
   <a asp-page="/Account/Login">
-    <el-button type="primary">@L["Login"]</el-button>
+    <el-button type="primary">["Login"]</el-button>
   </a>
 </div>
 
-<script>
-  new Vue({
-    el: "#vue"
-  })
-</script>

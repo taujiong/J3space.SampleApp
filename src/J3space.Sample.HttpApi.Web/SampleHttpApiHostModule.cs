@@ -15,6 +15,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using Volo.Abp;
 using Volo.Abp.AspNetCore.Authentication.JwtBearer;
+using Volo.Abp.AspNetCore.Mvc.UI.Theme.Basic;
 using Volo.Abp.AspNetCore.Serilog;
 using Volo.Abp.Autofac;
 using Volo.Abp.Identity.AspNetCore;
@@ -32,6 +33,7 @@ namespace J3space.Sample
         typeof(SampleMongoDbModule),
         // typeof(AbpAccountWebModule),
         typeof(AbpIdentityServerWebModule),
+        typeof(AbpAspNetCoreMvcUiBasicThemeModule),
         typeof(AbpAspNetCoreAuthenticationJwtBearerModule),
         typeof(AbpIdentityAspNetCoreModule),
         typeof(AbpAspNetCoreSerilogModule)
