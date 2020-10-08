@@ -2,7 +2,7 @@
   "profiles": {
     "J3space.Sample.HttpApi.Web": {
       "commandName": "Project",
-      "launchBrowser": false,
+      "launchBrowser": true,
       "applicationUrl": "https://localhost:44373",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"

@@ -31,7 +31,7 @@ namespace J3space.Sample
         typeof(AbpAutofacModule),
         typeof(SampleApplicationModule),
         typeof(SampleMongoDbModule),
-        // typeof(AbpAccountWebModule),
+        // typeof(AbpAccountWebWrapperModule),
         typeof(AbpIdentityServerWebModule),
         typeof(AbpAspNetCoreMvcUiBasicThemeModule),
         typeof(AbpAspNetCoreAuthenticationJwtBearerModule),
