@@ -1,5 +1,8 @@
-﻿using Volo.Abp.AuditLogging;
+﻿using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.DependencyInjection.Extensions;
+using Volo.Abp.AuditLogging;
 using Volo.Abp.BackgroundJobs;
+using Volo.Abp.Emailing;
 using Volo.Abp.FeatureManagement;
 using Volo.Abp.Identity;
 using Volo.Abp.IdentityServer;
@@ -19,9 +22,16 @@ namespace J3space.Sample
         typeof(AbpPermissionManagementDomainIdentityModule),
         typeof(AbpIdentityServerDomainModule),
         typeof(AbpPermissionManagementDomainIdentityServerModule),
-        typeof(AbpSettingManagementDomainModule)
+        typeof(AbpSettingManagementDomainModule),
+        typeof(AbpEmailingModule)
     )]
     public class SampleDomainModule : AbpModule
     {
+        public override void ConfigureServices(ServiceConfigurationContext context)
+        {
+#if DEBUG
+            context.Services.Replace(ServiceDescriptor.Singleton<IEmailSender, NullEmailSender>());
+#endif
+        }
     }
 }

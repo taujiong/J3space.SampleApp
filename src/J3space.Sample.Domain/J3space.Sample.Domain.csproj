@@ -7,6 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Volo.Abp.Emailing" Version="3.2.0"/>
     <PackageReference Include="Volo.Abp.Identity.Domain" Version="3.2.0"/>
     <PackageReference Include="Volo.Abp.IdentityServer.Domain" Version="3.2.0"/>
     <PackageReference Include="Volo.Abp.PermissionManagement.Domain.Identity" Version="3.2.0"/>
